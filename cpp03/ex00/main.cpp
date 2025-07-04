@@ -6,13 +6,13 @@
 /*   By: xhuang <xhuang@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/29 16:30:23 by xhuang            #+#    #+#             */
-/*   Updated: 2025/06/29 18:33:39 by xhuang           ###   ########.fr       */
+/*   Updated: 2025/07/04 18:00:16 by xhuang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-void printStatus(const ClapTrap& bot, const std::string& label) {
+static void printStatus(const ClapTrap& bot, const std::string& label) {
     std::cout << "\n< " << label << " >" << std::endl;
     std::cout << "Name: " << bot.getName() << std::endl;
     std::cout << "Hit Points (HP): " << bot.getHitPoints() << std::endl;
