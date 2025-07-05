@@ -6,7 +6,7 @@
 /*   By: xhuang <xhuang@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 17:51:52 by xhuang            #+#    #+#             */
-/*   Updated: 2025/07/04 17:47:26 by xhuang           ###   ########.fr       */
+/*   Updated: 2025/07/05 17:23:49 by xhuang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,7 @@ public:
     ClapTrap(std::string name);
     ClapTrap(const ClapTrap& src);
     ClapTrap& operator=(const ClapTrap &other);
-    virtual ~ClapTrap();  // change to virtual to allow polymorphism
-
+    virtual ~ClapTrap();  // virtual destructor to ensure proper cleanup of both classes
 
     // getter & setter
     std::string getName() const;

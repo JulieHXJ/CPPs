@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xhuang <xhuang@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/29 18:38:20 by xhuang            #+#    #+#             */
-/*   Updated: 2025/07/05 18:04:12 by xhuang           ###   ########.fr       */
+/*   Created: 2025/07/05 14:53:06 by xhuang            #+#    #+#             */
+/*   Updated: 2025/07/05 17:47:01 by xhuang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-# define SCAVTRAP_HPP
+#ifndef DOG_HPP
+#define DOG_HPP
+#include "Animal.hpp"
 
-#include "ClapTrap.hpp"
-
-class ScavTrap : public ClapTrap
+class Dog : public Animal
 {
 public:
-    ScavTrap(std::string name);
-    ~ScavTrap();
-    ScavTrap(const ScavTrap& src);
-    ScavTrap& operator=(const ScavTrap &other);
+    Dog();
+    Dog(const Dog& src);
+    Dog& operator=(const Dog &other);
+    virtual ~Dog();// virtual destructor to ensure proper cleanup of derived classes
 
-    void attack(const std::string& target);
-    void guardGate();
+    void makeSound() const;
 };
+
 
 
 #endif

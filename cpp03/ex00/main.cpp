@@ -6,7 +6,7 @@
 /*   By: xhuang <xhuang@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/29 16:30:23 by xhuang            #+#    #+#             */
-/*   Updated: 2025/07/04 18:00:16 by xhuang           ###   ########.fr       */
+/*   Updated: 2025/07/05 17:17:31 by xhuang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,10 @@ static void printStatus(const ClapTrap& bot, const std::string& label) {
 int main(void) 
 {
     //defination
-    ClapTrap a("Tom");//constructor
-    ClapTrap b(a);//copy constructor
+    ClapTrap a("Tom");
+    ClapTrap b(a);
     ClapTrap c("Jerry");
-    a = c;//copy assignment operator
+    a = c;
 
     //display
     std::cout << "\n INITIAL STATUS" << std::endl;

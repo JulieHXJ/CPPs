@@ -6,7 +6,7 @@
 /*   By: xhuang <xhuang@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/04 18:12:02 by xhuang            #+#    #+#             */
-/*   Updated: 2025/07/04 18:19:18 by xhuang           ###   ########.fr       */
+/*   Updated: 2025/07/05 18:04:52 by xhuang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,25 @@ FragTrap::~FragTrap()
 {
     std::cout << "FragTrap destructor called for " << name << std::endl;
 }
+
+FragTrap::FragTrap(const FragTrap& src) : ClapTrap(src)
+{
+    std::cout << "FragTrap copy constructor called for " << src.name << std::endl;
+    *this = src;
+}
+
+FragTrap& FragTrap::operator=(const FragTrap &other)
+{
+    std::cout << "FragTrap assignment operator called for " << other.name << std::endl;
+    if (this != &other)
+    {
+        this->name = other.name;
+        this->hitPoints = other.hitPoints;
+        this->energyPoints = other.energyPoints;
+        this->attackDamage = other.attackDamage;
+    }
+    return *this;
+}  
 
 void FragTrap::attack(const std::string& target)
 {
