@@ -6,7 +6,7 @@
 /*   By: xhuang <xhuang@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/05 17:08:02 by xhuang            #+#    #+#             */
-/*   Updated: 2025/07/09 11:44:51 by xhuang           ###   ########.fr       */
+/*   Updated: 2025/07/09 11:49:42 by xhuang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,4 +42,9 @@ Cat::~Cat()
 void Cat::makeSound() const
 {
     std::cout << "\033[38;5;14mCat makes a sound: Meow~\033[0m" << std::endl;
+}
+
+Brain* Cat::getBrain() const
+{
+    return this->brain;
 }
