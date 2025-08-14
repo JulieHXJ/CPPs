@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   RobotomyRequestForm.cpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: xhuang <xhuang@student.42.fr>              +#+  +:+       +#+        */
+/*   By: junjun <junjun@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/08 18:09:06 by xhuang            #+#    #+#             */
-/*   Updated: 2025/08/08 18:14:29 by xhuang           ###   ########.fr       */
+/*   Updated: 2025/08/14 17:28:53 by junjun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,17 @@ RobotomyRequestForm& RobotomyRequestForm::operator=(const RobotomyRequestForm& o
 
 RobotomyRequestForm::~RobotomyRequestForm() {}
 
-
 void RobotomyRequestForm::executeAction() const {
     //print noise
-    std::cout << "\033[32m* Bzzzzzzzzzzzzzzzz *\033[0m" << std::endl;
+    std::cout << "\033[36m* Bzzzzzzzzzzzzzzzz *\033[0m" << std::endl;
     
     //50% chance of success
-    
+    if (rand() % 2)
+    {
+        std::cout << _target << " has been robotomized successfully." << std::endl;
+    }
+    else
+    {
+        std::cout << "Robotomy failed on " << _target << std::endl;
+    }
 }

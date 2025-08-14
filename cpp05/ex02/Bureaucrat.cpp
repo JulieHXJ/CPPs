@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: xhuang <xhuang@student.42.fr>              +#+  +:+       +#+        */
+/*   By: junjun <junjun@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/04 16:29:09 by xhuang            #+#    #+#             */
-/*   Updated: 2025/08/08 17:46:33 by xhuang           ###   ########.fr       */
+/*   Updated: 2025/08/14 17:24:42 by junjun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,10 +94,10 @@ If not, print an explicit error message.
 void Bureaucrat::executeForm(AForm const & form) const {
     try {
         form.execute(*this);
-        std::cout << name << " executed " << form.getName() << std::endl;
+        std::cout << "\033[32m" <<  name << " executed " << form.getName() << "\033[0m" << std::endl;
     } catch (const std::exception &e) {
-        std::cout << name << " couldn't execute " << form.getName()
-                  << " because " << e.what() << std::endl;
+        std::cout << "\033[31m" <<  name << " couldn't execute " << form.getName()
+                  << " because " << e.what() << "\033[0m" << std::endl;
     }
 }
 
