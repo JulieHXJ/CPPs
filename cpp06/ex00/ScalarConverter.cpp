@@ -6,7 +6,7 @@
 /*   By: junjun <junjun@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/21 17:24:40 by junjun            #+#    #+#             */
-/*   Updated: 2025/08/22 23:28:51 by junjun           ###   ########.fr       */
+/*   Updated: 2025/08/24 18:47:23 by junjun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -180,6 +180,7 @@ void ScalarConverter::convert(const std::string &input)
 	printDouble(d);	
 }
 
+//test program
 int main(int argc, char **argv)
 {
 	if (argc == 2) {
