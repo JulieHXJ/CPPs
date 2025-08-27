@@ -6,7 +6,7 @@
 /*   By: junjun <junjun@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/25 12:50:45 by junjun            #+#    #+#             */
-/*   Updated: 2025/08/26 22:50:04 by junjun           ###   ########.fr       */
+/*   Updated: 2025/08/28 00:16:48 by junjun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,5 @@ void iter(T const* array, size_t length, void (*func)(T const&)) {
 		func(array[i]);
 	}
 }
-
 
 #endif
