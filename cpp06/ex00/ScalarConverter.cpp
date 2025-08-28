@@ -6,7 +6,7 @@
 /*   By: xhuang <xhuang@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/21 17:24:40 by junjun            #+#    #+#             */
-/*   Updated: 2025/08/28 16:25:55 by xhuang           ###   ########.fr       */
+/*   Updated: 2025/08/28 16:43:43 by xhuang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,12 @@ static bool checkInt(const std::string& input) {
 	}
 	return true;
 }
+
+
+
+
+
+
 		
 //convert char/int/float to double
 static bool toDouble(const std::string &input, double &d)
@@ -207,11 +213,101 @@ static bool			isChar(std::string);
 
 
 
-//test program
-int main(int argc, char **argv)
-{
-	if (argc == 2) {
-		ScalarConverter::convert(argv[1]);
-	}
-	return 0;
-}
+
+		type getType(std::string input)
+		{
+			size_t sign = (input[0] == '+' || input[0] == '-') ? 1 : 0;
+		
+			if (input.length() == 1 && !std::isdigit(input[0]))
+				return CHAR;
+			else if (input.find_first_not_of("0123456789", sign) == std::string::npos)
+				return INT;
+			else if ((input.back() == 'f' && input.find_first_not_of("0123456789.f", sign) == std::string::npos)
+						|| input == "-inff" || input == "+inff" || input == "nanf")
+			{
+				size_t first_dot = input.find('.');
+				size_t last_dot = input.rfind('.');
+				if (first_dot == last_dot || input == "-inff" || input == "+inff" || input == "nanf") 
+					return FLOAT;
+			}
+			else if (input.find_first_not_of("0123456789.", sign) == std::string::npos
+					|| input == "-inf" || input == "+inf" || input == "nan")
+			{
+				size_t first_dot = input.find('.');
+				size_t last_dot = input.rfind('.');
+				if (first_dot == last_dot || input == "-inf" || input == "+inf" || input == "nan")
+					return DOUBLE;
+			}
+				return INVALID;
+			}
+
+		
+		void allImp()
+		{
+			std::cout << "char: Impossible" << std::endl;
+			std::cout << "int: Impossible" << std::endl;
+			std::cout << "float: Impossible" << std::endl;
+			std::cout << "double: Impossible" << std::endl;
+		}
+		
+		
+		bool intImpossible(double value)
+		{
+			return std::isnan(value) || std::isinf(value) ||
+				   value < INT_MIN || value > INT_MAX;
+		}
+
+
+		
+		void ScalarConverter::convert(std::string input)
+		{
+			if (input.empty())
+			{
+				std::cout << "Invalid input: empty string" << std::endl;
+				return;
+			}
+			if (getType(input) == CHAR)
+			{
+				char output = input[0];
+				printOutput(output);
+			}
+			else if (getType(input) == INT)
+			{
+				try
+				{
+					int output = std::stoi(input);
+					printOutput(output);
+				}
+				catch(const std::exception& e)
+				{
+					allImp();
+				}
+			}
+			else if (getType(input) == FLOAT)
+			{
+				try
+				{
+					float output = std::stof(input);
+					printOutput(output);
+				}
+				catch(const std::exception& e)
+				{
+					allImp();
+				}
+			}
+			else if (getType(input) == DOUBLE)
+			{
+				try
+				{
+					double output = std::stod(input);
+					printOutput(output);
+				}
+				catch(const std::exception& e)
+				{
+					allImp();
+				}
+			}
+			else
+				std::cerr << "Error: Invalid input" << std::endl;
+		}
+		

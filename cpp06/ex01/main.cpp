@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: junjun <junjun@student.42.fr>              +#+  +:+       +#+        */
+/*   By: xhuang <xhuang@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/23 14:51:44 by junjun            #+#    #+#             */
-/*   Updated: 2025/08/23 15:04:12 by junjun           ###   ########.fr       */
+/*   Updated: 2025/08/28 16:52:56 by xhuang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int main()
 	//deserialize
 	Data* newData = Serializer::deserialize(raw);
 	std::cout << "Deserialized Data - id: " << newData->id << ", name: " << newData->name << ", value: " << newData->value << "\n";
-	std::cout << "Deserialized Data address: " << newData << "\n";
+	std::cout << "Deserialized Data address: " << newData << "\n";//should be diff
 
 
 	//modify newData to see if it affects original data
@@ -42,3 +42,26 @@ int main()
 	return 0;
 	
 }
+
+
+/**
+ * int main()
+{
+    Data original(5, "Katzen", 'k');
+
+    uintptr_t res = Serializer::serialize(&original);
+    Data *ultRes = Serializer::deserialize(res);
+
+    std::cout << PURPLE << "Original pointer address: " << &original << std::endl;
+    original.printVars();
+    std::cout << BLUE << "Result pointer address: " << &ultRes << std::endl;
+    ultRes->printVars();
+
+    if (&original == ultRes)
+        std::cout << GREEN << "SUCCESS - Pointers are equal!" << std::endl;
+    else
+        std::cout << RED << "FAILURE - Pointers are not equal!" << std::endl;
+
+    return 0;
+}
+ */

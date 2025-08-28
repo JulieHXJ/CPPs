@@ -6,7 +6,7 @@
 /*   By: xhuang <xhuang@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/21 17:15:43 by junjun            #+#    #+#             */
-/*   Updated: 2025/08/28 16:29:55 by xhuang           ###   ########.fr       */
+/*   Updated: 2025/08/28 16:42:22 by xhuang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ enum type {CHAR, INT, FLOAT, DOUBLE, INVALID};
 type getType(std::string s);
 void allImp();
 bool intImpossible(double value);
-/* bool isSpecial(std::string input); */
 
 template <typename T>
 void printOutput(T output) 
