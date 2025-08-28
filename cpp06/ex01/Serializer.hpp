@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Serializer.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: junjun <junjun@student.42.fr>              +#+  +:+       +#+        */
+/*   By: xhuang <xhuang@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/22 23:31:52 by junjun            #+#    #+#             */
-/*   Updated: 2025/08/23 14:18:15 by junjun           ###   ########.fr       */
+/*   Updated: 2025/08/28 16:26:59 by xhuang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ private:
 	Serializer();
 	Serializer(const Serializer&);
 	Serializer& operator=(const Serializer&);
-	~Serializer();
+	~Serializer();//public?
 	
 public:
 	static uintptr_t serialize(Data* ptr);

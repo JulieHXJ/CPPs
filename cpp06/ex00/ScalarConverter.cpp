@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScalarConverter.cpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: junjun <junjun@student.42.fr>              +#+  +:+       +#+        */
+/*   By: xhuang <xhuang@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/21 17:24:40 by junjun            #+#    #+#             */
-/*   Updated: 2025/08/24 18:47:23 by junjun           ###   ########.fr       */
+/*   Updated: 2025/08/28 16:25:55 by xhuang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -179,6 +179,33 @@ void ScalarConverter::convert(const std::string &input)
 	printFloat(d);
 	printDouble(d);	
 }
+
+
+
+/*
+static bool			isChar(std::string);
+		static bool			isDouble(std::string);
+		static bool			isFloat(std::string);
+		static bool			isInteger(std::string);
+		static bool			isSpecial(std::string);
+
+		static char			strToChar(std::string const &);
+		static double		strToDouble(std::string const &);
+		static float		strToFloat(std::string const &);
+		static int			strToInteger(std::string const &);
+
+		static void			displayDouble(double);
+		static void			displayFloat(float);
+		static void			displayInteger(int);
+		static void			displayChar(char c);
+		static void			displaySpecial(std::string const &);
+		static void			displayImpossible(void);
+
+		static std::string	trim(std::string const &);
+		*/
+
+
+
 
 //test program
 int main(int argc, char **argv)
