@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: xhuang <xhuang@student.42.fr>              +#+  +:+       +#+        */
+/*   By: junjun <junjun@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/28 16:37:02 by xhuang            #+#    #+#             */
-/*   Updated: 2025/08/28 16:38:56 by xhuang           ###   ########.fr       */
+/*   Updated: 2025/09/01 12:16:38 by junjun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,26 +15,35 @@
 
 void subjExampleTest()
 {
-    std::cout << "Testing subj:" <<  std::endl;
+    std::cout << "GIVEN TEST:" <<  std::endl;
     ScalarConverter::convert("0");
+    std::cout << std::endl;
     ScalarConverter::convert("nan");
+    std::cout << std::endl;
     ScalarConverter::convert("42.0f");
     std::cout << std::endl;
 }
 
 void charIntTest()
 {
-    std::cout << "Testing chars:" << std::endl;
+    std::cout << "USER TEST" << std::endl;
+    std::cout << "Testing chars" << std::endl;
     ScalarConverter::convert("a");
+    std::cout << std::endl;
     ScalarConverter::convert("%");
+    std::cout << std::endl;
     ScalarConverter::convert("");
     std::cout << std::endl;
 
     std::cout << "Testing ints:" << std::endl;
     ScalarConverter::convert("235");
+    std::cout << std::endl;
     ScalarConverter::convert("-32532");
+    std::cout << std::endl;
     ScalarConverter::convert("+32532");
+    std::cout << std::endl;
     ScalarConverter::convert("325325423523525");
+    std::cout << std::endl;
     ScalarConverter::convert("-3252352353523235");
     std::cout << std::endl;
 }

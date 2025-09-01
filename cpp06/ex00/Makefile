@@ -6,7 +6,7 @@
 #    By: junjun <junjun@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/08/21 17:13:40 by junjun            #+#    #+#              #
-#    Updated: 2025/08/22 23:29:00 by junjun           ###   ########.fr        #
+#    Updated: 2025/09/01 12:11:48 by junjun           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 NAME = convert
 
-SRC = ScalarConverter.cpp
+SRC = ScalarConverter.cpp main.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
